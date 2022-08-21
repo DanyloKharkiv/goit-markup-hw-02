@@ -1,13 +1,36 @@
 /* стилі головної сторінки, хедера і футера */
 
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
 :root {
     --dark-color: #212121;
     --grey-color: #757575;
+    --another-grey: #2F303A;
+    --black-color: #000;
+    --blue-color: #2196F3;
+    --white-color: #ffffff;
+    --another-white: #F5F4FA;
+
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
+    background-color: var(--white-color);
+    letter-spacing: 0.03em;
     color: var(--grey-color);
 }
 
@@ -16,32 +39,30 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--nav-color);
 }
 
 .page-logo {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: #000;
+    color: var(--black-color);
     
 }
 
 .logo-web {
-    color: #2196F3;
+    color: var(--blue-color);
 }
 
 .header-nav a:hover,
 .header-nav a:focus, 
 .mail-tel a:hover,
 .mail-tel a:focus {
-    color: #2196F3;
+    color: var(--blue-color);
 }
 
 li.current-page a{
-    color: #2196F3;
+    color: var(--blue-color);
 }
 
 .header-nav, .mail-tel{
@@ -61,11 +82,11 @@ li.current-page a{
 }
 
 .first-section {
-    background-color: #2F303A;
+    background-color: var(--another-grey);
 }
 
 .effect-solut {
-    color:#ffffff;
+    color:var(--white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -75,22 +96,33 @@ li.current-page a{
 }
 
 .open-btn {
-    font-family:'Roboto', sans-serif;
+    font-family: inherit;
     cursor: pointer;
-    color: #ffffff;
-    background-color: #2196F3;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    background-color: var(--blue-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
 
 .second-section {
     font-size: 14px;
-    letter-spacing: 0.03em;
     
 }
 
 .our-features {
-    display: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .secd-sect-list {
@@ -99,12 +131,14 @@ li.current-page a{
 
 .secd-sect-title {
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--dark-color);
 }
 
 .secd-sect-text {
+    font-size: 14px;
     line-height: 1.71;
 }
 
@@ -114,7 +148,6 @@ li.current-page a{
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .thrid-sec-list {
@@ -122,7 +155,7 @@ li.current-page a{
 }
 
 .fourth-section {
-    background: #F5F4FA;
+    background: var(--another-white);
 }
 
 img {
@@ -134,7 +167,6 @@ img {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
     color: var(--dark-color);
 }
 
@@ -143,13 +175,12 @@ img {
 }
 
 .fourth-sec-items {
-    background-color: #ffffff;
+    background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .name-teammate {
@@ -159,16 +190,15 @@ img {
 }
 
 .address-block {
-    background: #2F303A;
+    background: var(--another-grey);
 }
 
 .page-logo-footer {
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .footer-contacts {
@@ -176,12 +206,10 @@ img {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
-    
 }
 
 .geoloc {
-    color: #FFFFFF;
+    color: var(--white-color);
 }
 
 .footer-mail, .footer-tel {
@@ -191,24 +219,39 @@ img {
 /* стилі сторінки портфоліо */
 
 .portfolio-title {
-    display: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 .portfolio-filter button:hover,
 .portfolio-filter button:focus {
-    color: #fff;
-    background-color: #2196F3;
+    color: var(--white-color);
+    background-color: var(--blue-color);
 }
 
 .portfolio-filter {
     list-style: none;
+    
+}
+
+.portfolio-filter-btn {
+    font-family: inherit;
+    cursor: pointer;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
-    letter-spacing: 0.03em;
-    background: #F5F4FA;
+    background-color: var(--another-white);
     border-radius: 4px;
-    color: var(--dark-color)
+    color: var(--dark-color);
+    border-color: var(--another-white);
 }
 
 .portfolio-list {
@@ -226,6 +269,5 @@ img {
 .portfolio-list-text {
     font-size: 16px;
     line-height: 1.88;
-    letter-spacing: 0.03em;
     color: var(--grey-color);
 }
